@@ -1,0 +1,2181 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    color: #111;
+    font-family: 'Baskervville', Georgia, serif;
+}
+
+/* PORTADA */
+
+.portada {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+    background-color: #111;
+}
+
+/* IMAGEN DE FONDO */
+
+.imagen-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%) brightness(60%);
+    z-index: 0;
+}
+
+/* MENÚ SUPERIOR - SPECIAL GOTHIC */
+
+.menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 0 30px;
+    z-index: 3;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    font-size: 19px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ed1c24;
+}
+
+/* TÍTULO ENCIMA DE LA FOTO - ANTON */
+
+.contenido-portada {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    text-align: center;
+    z-index: 2;
+}
+
+.contenido-portada h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(65px, 10vw, 190px);
+    line-height: 1.05;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 400;
+}
+
+/* LÍNEA ROJA DECORATIVA */
+
+.linea-roja {
+    width: 180px;
+    height: 8px;
+    background-color: #ed1c24;
+    margin: 25px auto;
+}
+
+/* FRASE DESTACADA DE PORTADA - OSWALD */
+
+.contenido-portada p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+}
+
+/* TEXTOS INFERIORES - OSWALD */
+
+.pie-portada {
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 45px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+/* SECCIONES DE LOS CAPÍTULOS */
+
+.capitulo {
+    min-height: 85vh;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* NÚMEROS DE CAPÍTULO - OSWALD */
+
+.capitulo span {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+   
+}
+
+
+/* TÍTULOS DE CAPÍTULO - ANTON */
+
+.capitulo h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(45px, 7vw, 100px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+/* SUBTÍTULOS - SPECIAL GOTHIC */
+
+.capitulo h3,
+.subtitulo {
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* CUERPO DE TEXTO - BASKERVVILLE */
+
+.capitulo p {
+    font-family: 'Baskervville', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 750px;
+}
+
+/* FRASES Y TEXTOS DESTACADOS - OSWALD */
+
+.destacado,
+.frase {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+/* CUADROS DE LOS CAPÍTULOS */
+
+.capitulo {
+    width: 85%;
+    min-height: 450px;
+    margin: 40px auto;
+    padding: 70px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+/* ANTES DEL SILENCIO */
+
+#antes {
+    background-color: #ed1c24;
+    color: white;
+}
+
+/* LA LIBERTAD ARREBATADA */
+
+#libertad {
+    background-color: #111111;
+    color: white;
+}
+
+/* VOCES QUE RESISTEN */
+
+#voces {
+    background-color: #e5e5e5;
+    color: #111111;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 768px) {
+    .capitulo {
+        width: 90%;
+        min-height: 350px;
+        padding: 35px;
+        margin: 25px auto;
+    }
+}
+
+
+/* PIE DE IMAGEN - ANTES DEL SILENCIO */
+
+/* RECTANGULO ROJO */
+
+.primera .foto-inicial .cuadro-rojo {
+    position: absolute;
+
+    width: 65%;
+    height: 190px;
+
+    left: 25%;
+    top: 78%;
+
+    background-color: rgba(237, 28, 36, 0.85);
+
+    z-index: 2;
+    mix-blend-mode: normal;
+
+    padding: 80px 15px 15px;
+    box-sizing: border-box;
+}
+
+/* TEXTO DEL PIE DE IMAGEN */
+
+.primera .foto-inicial .pie-imagen {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+
+    font-size: 16px;
+    line-height: 1.25;
+
+    color: white;
+    text-align: left;
+
+    margin: 0;
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 768px) {
+
+    .primera .foto-inicial .cuadro-rojo {
+        height: 160px;
+        padding: 55px 10px 10px;
+    }
+
+    .primera .foto-inicial .pie-imagen {
+        font-size: 12px;
+        line-height: 1.25;
+    }
+}
+
+/* CONFIGURACION GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    color: #111;
+    font-family: 'Baskervville', Georgia, serif;
+}
+
+/* MENU SUPERIOR */
+
+.menu {
+    width: 100%;
+    background-color: #111;
+    padding: 22px 35px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    font-size: 19px;
+}
+
+.menu a:hover {
+    color: #ed1c24;
+}
+
+/* CONFIGURACION DE LAS PAGINAS */
+
+main {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.pagina {
+    width: 100%;
+    padding: 90px 10%;
+    position: relative;
+    overflow: hidden;
+    scroll-margin-top: 70px;
+}
+
+/* TIPOGRAFIAS */
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+}
+
+h2, h3 {
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Baskervville', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.55;
+    margin-bottom: 20px;
+}
+
+/* ======================= */
+/* PRIMERA COMPOSICION */
+/* ======================= */
+
+.primera {
+    padding-top: 90px;
+    padding-bottom: 130px;
+}
+
+/* FOTOGRAFIA SUPERIOR */
+
+.foto-inicial {
+    width: 70%;
+    margin: 0 auto 150px;
+    position: relative;
+}
+
+.foto-inicial img {
+    width: 100%;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+/* CUADRO ROJO SUPERPUESTO */
+
+.cuadro-rojo {
+    position: absolute;
+    width: 65%;
+    height: 190px;
+    background-color: #ed1c24;
+
+    left: 25%;
+    top: 78%;
+    mix-blend-mode: multiply;
+}
+
+/* TITULO */
+
+.primera h1 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1.08;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* INTRODUCCION */
+
+.introduccion {
+    max-width: 780px;
+    margin: auto;
+    text-align: left;
+}
+
+/* ======================= */
+/* SEGUNDA COMPOSICION */
+/* ======================= */
+
+.segunda {
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
+/* BARRA ROJA SUPERIOR */
+
+.barra-roja {
+    width: 100%;
+    height: 40px;
+    background-color: #ed1c24;
+    margin-bottom: 30px;
+}
+
+/* SUBTITULO */
+
+.segunda h2 {
+    text-align: center;
+    font-size: 40px;
+
+    text-decoration: underline;
+    text-decoration-color: #ed1c24;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+
+    margin-bottom: 45px;
+}
+
+/* FOTOGRAFIA Y CITA */
+
+.foto-transformacion {
+    position: relative;
+    width: 55%;
+    margin: 0 auto 80px;
+}
+
+.foto-transformacion img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+}
+
+/* CITA SUPERPUESTA */
+
+.cita-transformacion {
+    position: absolute;
+    width: 60%;
+    right: -25%;
+    bottom: -40px;
+
+    background-color: white;
+    padding: 15px;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 19px;
+    line-height: 1.2;
+}
+
+/* TEXTO */
+
+.texto-transformacion {
+    margin-top: 40px;
+}
+
+/* SEGUNDO SUBTITULO */
+
+.segunda h3 {
+    font-size: 38px;
+    line-height: 1.1;
+
+    margin-top: 70px;
+    margin-bottom: 30px;
+
+    text-decoration: underline;
+    text-decoration-color: #ed1c24;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+}
+
+/* ======================= */
+/* TERCERA COMPOSICION */
+/* ======================= */
+
+.tercera {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 35px;
+
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+/* COLUMNA DE IMAGENES */
+
+.columna-imagenes {
+    display: flex;
+    flex-direction: column;
+}
+
+.columna-imagenes img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+/* CITA ROJA */
+
+.cita-roja {
+    background-color: #ed1c24;
+    color: white;
+
+    padding: 25px 18px;
+    min-height: 200px;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+/* CONTENIDO DERECHO */
+
+.contenido-retrocesos {
+    padding-top: 10px;
+}
+
+.contenido-retrocesos h2 {
+    font-size: 40px;
+    line-height: 1.1;
+
+    margin-top: 40px;
+    margin-bottom: 25px;
+
+    text-decoration: underline;
+    text-decoration-color: #ed1c24;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+}
+
+/* DOS COLUMNAS DE TEXTO */
+
+.columnas-texto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.columnas-texto p {
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+/* ======================= */
+/* CUARTA COMPOSICION */
+/* ======================= */
+
+
+/* CUARTA COMPOSICION */
+
+.cuarta {
+    padding-top: 20px;
+    padding-bottom: 100px;
+    border: none;
+}
+
+/* IMAGEN Y TEXTO SUPERIOR */
+
+.inicio-guerra {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    gap: 25px;
+    align-items: center;
+
+    margin-bottom: 20px;
+    border: none;
+}
+
+/* FOTOGRAFIA DE LA MUJER */
+
+.inicio-guerra img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+
+/* TEXTO AL LADO DE LA IMAGEN */
+
+.inicio-guerra p {
+    margin-bottom: 0;
+    font-family: 'Baskervville', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* SUBTITULO */
+
+.cuarta h2 {
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    font-size: 42px;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    text-decoration: underline;
+    text-decoration-color: #ed1c24;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+}
+
+
+/* COLUMNAS */
+
+.contenido-guerra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+}
+
+.texto-guerra {
+    position: relative;
+}
+
+.texto-guerra p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* SEGUNDA COLUMNA */
+
+.segunda-columna {
+    padding-top: 50px;
+}
+
+/* FIGURA ROJA */
+
+.marco-rojo {
+    position: absolute;
+
+    top: 0;
+    right: -30px;
+
+    width: 100%;
+    height: 430px;
+
+    border-top: 35px solid #ed1c24;
+    border-right: 80px solid #ed1c24;
+
+    z-index: 0;
+}
+
+/* TEXTO DELANTE DE LA FIGURA */
+
+.segunda-columna p {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+}
+
+/* FOTO INFERIOR */
+
+.foto-final {
+    width: 85%;
+    height: 145px;
+    object-fit: cover;
+    filter: grayscale(100%);
+
+    position: relative;
+    z-index: 2;
+
+    display: block;
+    margin: 25px 0 0 auto;
+}
+
+/* PIE DE PAGINA */
+
+footer {
+    background-color: #111;
+    padding: 35px 10%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: #ed1c24;
+}
+
+/* ======================= */
+/* ADAPTACION A CELULARES */
+/* ======================= */
+
+@media (max-width: 768px) {
+
+    .pagina {
+        padding: 65px 7%;
+    }
+
+    .menu {
+        padding: 18px;
+    }
+
+    .menu a {
+        font-size: 15px;
+    }
+
+    /* PRIMERA */
+
+    .foto-inicial {
+        width: 85%;
+        margin-bottom: 110px;
+    }
+
+    .foto-inicial img {
+        height: 230px;
+    }
+
+    .cuadro-rojo {
+        height: 130px;
+    }
+
+    .primera h1 {
+        font-size: 45px;
+        margin-bottom: 35px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    /* SEGUNDA */
+
+    .barra-roja {
+        height: 25px;
+    }
+
+    .segunda h2 {
+        font-size: 30px;
+    }
+
+    .foto-transformacion {
+        width: 75%;
+    }
+
+    .foto-transformacion img {
+        height: 190px;
+    }
+
+    .cita-transformacion {
+        font-size: 15px;
+        right: -15%;
+    }
+
+    .segunda h3 {
+        font-size: 30px;
+    }
+
+    /* TERCERA */
+
+    .tercera {
+        grid-template-columns: 32% 1fr;
+        gap: 15px;
+    }
+
+    .columna-imagenes img {
+        height: 230px;
+    }
+
+    .cita-roja {
+        padding: 12px;
+        font-size: 14px;
+        min-height: 160px;
+    }
+
+    .contenido-retrocesos h2 {
+        font-size: 28px;
+    }
+
+    .columnas-texto {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .columnas-texto p {
+        font-size: 14px;
+    }
+
+    /* CUARTA */
+
+    .inicio-guerra {
+        gap: 15px;
+    }
+
+    .inicio-guerra img {
+        height: 130px;
+    }
+
+    .cuarta h2 {
+        font-size: 30px;
+    }
+
+    .contenido-guerra {
+        gap: 20px;
+    }
+
+    .texto-guerra p {
+        font-size: 14px;
+    }
+
+    .marco-rojo {
+        border-top-width: 25px;
+        border-right-width: 35px;
+        height: 300px;
+        right: -10px;
+    }
+
+    .foto-final {
+        width: 100%;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .tercera {
+        grid-template-columns: 1fr;
+    }
+
+    .columna-imagenes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .columna-imagenes img {
+        height: 180px;
+    }
+
+    .cita-roja {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        min-height: auto;
+    }
+
+    .contenido-guerra {
+        grid-template-columns: 1fr;
+    }
+
+    .segunda-columna {
+        padding-top: 30px;
+    }
+
+    .marco-rojo {
+        width: 80%;
+        right: 0;
+    }
+
+    footer a {
+        font-size: 16px;
+    }
+}
+
+
+/* QUITAR LINEA DIVISORIA ENTRE COMPOSICIONES */
+
+hr {
+    display: none !important;
+}
+
+.tercera,
+.cuarta {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* ACERCAR LA FOTOGRAFIA AL CONTENIDO */
+
+.tercera {
+    padding-bottom: 0;
+}
+
+.cuarta {
+    padding-top: 10px;
+}
+
+.inicio-guerra {
+    margin-top: 0;
+    margin-bottom: 15px;
+    border: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* ===================================== */
+/* LA LIBERTAD ARREBATADA (paginas 8 a 11) */
+/* ===================================== */
+
+:root {
+    --rojo: #ed1c24;
+    --negro: #111111;
+    --gris: #dedede;
+
+    /* 1u = 1px cuando la "pagina" mide 700px.
+       En pantallas mas angostas todo se reduce proporcionalmente. */
+    --u: min(1px, 0.1429vw);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+    color: var(--negro);
+    font-family: 'Baskervville', Georgia, serif;
+}
+
+/* ===================================== */
+/* MENU SUPERIOR */
+/* ===================================== */
+
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+    padding: 22px 4%;
+    background: var(--negro);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.menu a {
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu a:hover {
+    color: var(--rojo);
+}
+
+/* ===================================== */
+/* ESTRUCTURA */
+/* ===================================== */
+
+main {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.pagina {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    scroll-margin-top: 85px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    font-weight: 400;
+    line-height: 1.12;
+}
+
+p {
+    font-family: 'Baskervville', Georgia, serif;
+    line-height: 1.3;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+/* Fotografias: todas en blanco y negro */
+.pagina img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+/* Linea roja bajo los subtitulos (empieza donde empieza el texto) */
+.pagina h2::after {
+    content: "";
+    display: block;
+    width: calc(120 * var(--u));
+    height: 2px;
+    background: var(--rojo);
+    margin: calc(6 * var(--u)) 0 0;
+}
+
+
+/* ===================================== */
+/* PAGINA 8 - PORTADA DEL CAPITULO */
+/* ===================================== */
+
+.primera {
+    padding: calc(65 * var(--u)) 6.8% calc(45 * var(--u));
+}
+
+.foto-principal {
+    position: relative;
+    width: calc(423 * var(--u));
+    margin: 0 auto calc(122 * var(--u));
+}
+
+.foto-principal img {
+    aspect-ratio: 423 / 328;
+}
+
+/* Cita: la parte alta se mezcla con la foto, la caja sale por debajo */
+.cita-principal {
+    position: absolute;
+    top: 100%;
+    left: calc(58 * var(--u));
+    width: calc(295 * var(--u));
+
+    padding: calc(10 * var(--u)) calc(55 * var(--u));
+    background: var(--rojo);
+
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: max(11px, calc(16.5 * var(--u)));
+    line-height: 1.35;
+    text-align: center;
+}
+
+.cita-principal::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: calc(71 * var(--u));
+
+    background: var(--rojo);
+    mix-blend-mode: multiply;
+}
+
+.primera h1 {
+    font-size: max(28px, calc(54 * var(--u)));
+    line-height: 1.12;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0 0 calc(52 * var(--u));
+}
+
+/* Los tres parrafos fluyen como un solo bloque, como en InDesign */
+.primera .introduccion {
+    font-size: max(11px, calc(18.5 * var(--u)));
+    line-height: 1.25;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+.primera .introduccion p {
+    display: inline;
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+/* ===================================== */
+/* PAGINA 9 - DESAPARICION / RECONSTRUCCION */
+/* ===================================== */
+
+.segunda {
+    padding: calc(58 * var(--u)) 0 calc(30 * var(--u));
+    min-height: calc(1000 * var(--u));
+}
+
+/* Rectangulo rojo a todo el ancho */
+.rectangulo-superior {
+    width: 100%;
+    height: calc(147 * var(--u));
+    background: var(--rojo);
+    margin-bottom: calc(21 * var(--u));
+}
+
+.segunda h2 {
+    display: table;
+    margin: 0 auto calc(33 * var(--u));
+    font-size: max(17px, calc(37 * var(--u)));
+    white-space: nowrap;
+    text-align: left;
+}
+
+.segunda h2::after {
+    width: calc(152 * var(--u));
+    margin-top: calc(4 * var(--u));
+}
+
+.segunda .titulo-centrado {
+    margin-top: calc(45 * var(--u));
+    margin-bottom: calc(14 * var(--u));
+}
+
+.segunda .titulo-centrado::after {
+    width: calc(115 * var(--u));
+}
+
+.texto-historia {
+    margin: 0 6.9%;
+}
+
+.texto-historia p {
+    font-size: max(11px, calc(18.5 * var(--u)));
+    line-height: 1.32;
+    text-align: justify;
+    margin-bottom: calc(24 * var(--u));
+}
+
+.texto-historia p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ===================================== */
+/* PAGINA 10 - 2021 (composicion exacta) */
+/* ===================================== */
+
+#regreso {
+    height: calc(990 * var(--u));
+}
+
+/* Los contenedores no generan caja: los hijos se colocan sobre la pagina */
+#regreso .regreso-superior,
+#regreso .regreso-inferior,
+#regreso .regreso-derecha-wrap {
+    display: contents;
+}
+
+/* Rectangulo rojo derecho (borde de la pagina) */
+#regreso::before {
+    content: "";
+    position: absolute;
+    left: calc(568 * var(--u));
+    top: calc(45 * var(--u));
+    width: calc(122 * var(--u));
+    height: calc(223 * var(--u));
+    background: var(--rojo);
+}
+
+/* FOTO SUPERIOR */
+#regreso .regreso-foto-superior {
+    position: absolute;
+    left: calc(50 * var(--u));
+    top: calc(143 * var(--u));
+    width: calc(280 * var(--u));
+}
+
+#regreso .regreso-foto-superior img {
+    aspect-ratio: 280 / 272;
+}
+
+/* Rojo: parte solida arriba + parte que se mezcla sobre la foto */
+#regreso .regreso-rojo-arriba {
+    position: absolute;
+    left: calc(70 * var(--u));
+    top: calc(-116 * var(--u));
+    width: calc(225 * var(--u));
+    height: calc(116 * var(--u));
+    background: var(--rojo);
+}
+
+#regreso .regreso-rojo-arriba::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: calc(52 * var(--u));
+    background: var(--rojo);
+    mix-blend-mode: multiply;
+}
+
+/* TEXTO SUPERIOR: rodea el rectangulo rojo derecho */
+#regreso .regreso-texto-superior {
+    position: absolute;
+    left: calc(348 * var(--u));
+    top: calc(62 * var(--u));
+    width: calc(285 * var(--u));
+}
+
+#regreso .regreso-texto-superior::before {
+    content: "";
+    float: right;
+    width: calc(72 * var(--u));
+    height: calc(206 * var(--u));
+}
+
+#regreso p {
+    font-size: calc(17.5 * var(--u));
+    line-height: 1.3;
+    text-align: left;
+    margin: 0 0 calc(24 * var(--u));
+}
+
+#regreso .regreso-texto-superior p {
+    margin-bottom: calc(36 * var(--u));
+}
+
+/* COLUMNA IZQUIERDA INFERIOR */
+#regreso .regreso-izquierda {
+    position: absolute;
+    left: calc(48 * var(--u));
+    top: calc(440 * var(--u));
+    width: calc(245 * var(--u));
+}
+
+#regreso .regreso-titulo {
+    position: relative;
+    width: calc(232 * var(--u));
+    margin: 0 0 calc(22 * var(--u)) calc(40 * var(--u));
+    font-size: calc(38 * var(--u));
+    line-height: 1.08;
+    text-align: center;
+}
+
+/* Linea roja a la altura de la primera linea del titulo */
+#regreso .regreso-titulo::after {
+    position: absolute;
+    left: 0;
+    top: calc(47 * var(--u));
+    width: calc(120 * var(--u));
+    margin: 0;
+}
+
+/* FOTO INFERIOR + rojo */
+#regreso .regreso-foto-inferior {
+    position: absolute;
+    left: calc(20 * var(--u));
+    top: calc(270 * var(--u));
+    width: calc(244 * var(--u));
+}
+
+#regreso .regreso-foto-inferior img {
+    aspect-ratio: 244 / 230;
+}
+
+/* Rojo: franja solida a la izquierda + parte mezclada sobre la foto */
+#regreso .regreso-rojo-abajo {
+    position: absolute;
+    left: calc(-68 * var(--u));
+    top: calc(42 * var(--u));
+    width: calc(68 * var(--u));
+    height: calc(210 * var(--u));
+    background: var(--rojo);
+}
+
+#regreso .regreso-rojo-abajo::before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: calc(68 * var(--u));
+    height: calc(188 * var(--u));
+    background: var(--rojo);
+    mix-blend-mode: multiply;
+}
+
+#regreso .regreso-rojo-abajo::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: calc(188 * var(--u));
+    width: calc(68 * var(--u));
+    height: calc(22 * var(--u));
+    background: var(--rojo);
+}
+
+/* COLUMNA DERECHA */
+#regreso .regreso-derecha {
+    position: absolute;
+    left: calc(372 * var(--u));
+    top: calc(428 * var(--u));
+    width: calc(255 * var(--u));
+}
+
+#regreso .regreso-derecha p:last-child,
+#regreso .regreso-izquierda p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+/* ===================================== */
+/* PAGINA 11 - FUTURO (composicion exacta) */
+/* ===================================== */
+
+.cuarta {
+    height: calc(1040 * var(--u));
+}
+
+.cuarta .inicio-futuro,
+.cuarta .columnas-futuro {
+    display: contents;
+}
+
+/* Fondo gris en dos bloques */
+.fondo-gris {
+    position: absolute;
+    left: 0;
+    top: calc(210 * var(--u));
+    width: calc(648 * var(--u));
+    height: calc(420 * var(--u));
+    background: var(--gris);
+    z-index: 0;
+}
+
+.fondo-gris::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: calc(607 * var(--u));
+    height: calc(340 * var(--u));
+    background: var(--gris);
+}
+
+/* Foto superior izquierda */
+.foto-futuro {
+    position: absolute;
+    left: calc(10 * var(--u));
+    top: calc(50 * var(--u));
+    width: calc(226 * var(--u));
+    z-index: 2;
+}
+
+.foto-futuro img {
+    aspect-ratio: 226 / 222;
+}
+
+.franja-roja {
+    position: absolute;
+    left: calc(-10 * var(--u));
+    top: 0;
+    width: calc(10 * var(--u));
+    height: 100%;
+    background: var(--rojo);
+}
+
+.franja-roja::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: calc(72 * var(--u));
+    height: 100%;
+    background: var(--rojo);
+    mix-blend-mode: multiply;
+}
+
+/* Titulo */
+.inicio-futuro h2 {
+    position: absolute;
+    left: calc(280 * var(--u));
+    top: calc(138 * var(--u));
+    z-index: 1;
+
+    font-size: calc(37 * var(--u));
+    white-space: nowrap;
+    text-align: left;
+}
+
+.inicio-futuro h2::after {
+    width: calc(138 * var(--u));
+    margin: 0;
+}
+
+/* Introduccion: rodea la foto superior */
+.introduccion-futuro {
+    position: absolute;
+    left: calc(44 * var(--u));
+    top: calc(232 * var(--u));
+    width: calc(590 * var(--u));
+    z-index: 1;
+}
+
+.introduccion-futuro::before {
+    content: "";
+    float: left;
+    width: calc(212 * var(--u));
+    height: calc(44 * var(--u));
+}
+
+.cuarta p {
+    font-size: calc(17.5 * var(--u));
+    line-height: 1.23;
+    margin: 0 0 calc(20 * var(--u));
+}
+
+.introduccion-futuro p {
+    text-align: justify;
+}
+
+.introduccion-futuro p:last-child {
+    margin-bottom: 0;
+}
+
+/* Columnas de texto */
+.texto-futuro {
+    position: absolute;
+    left: calc(44 * var(--u));
+    top: calc(466 * var(--u));
+    width: calc(250 * var(--u));
+    z-index: 1;
+}
+
+.texto-futuro p {
+    text-align: left;
+    margin-bottom: calc(18 * var(--u));
+}
+
+.texto-futuro.columna-final {
+    left: calc(327 * var(--u));
+    width: calc(215 * var(--u));
+}
+
+/* Cita roja */
+.cita-final {
+    position: absolute;
+    left: 0;
+    top: calc(274 * var(--u));
+    width: calc(213 * var(--u));
+    height: calc(183 * var(--u));
+    padding: calc(22 * var(--u)) calc(14 * var(--u));
+    z-index: 1;
+
+    background: var(--rojo);
+    color: white;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: calc(16 * var(--u));
+    line-height: 1.35;
+    text-align: left;
+}
+
+/* Foto inferior: se mezcla con la cita roja */
+.foto-final {
+    position: absolute;
+    left: calc(130 * var(--u));
+    top: calc(356 * var(--u));
+    width: calc(243 * var(--u));
+    z-index: 2;
+}
+
+.foto-final img {
+    aspect-ratio: 243 / 215;
+}
+
+.foto-final::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(83 * var(--u));
+    height: calc(101 * var(--u));
+    background: var(--rojo);
+    mix-blend-mode: multiply;
+}
+
+
+/* ===================================== */
+/* PIE DE PAGINA */
+/* ===================================== */
+
+footer {
+    background: var(--negro);
+    padding: 35px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    font-size: 19px;
+}
+
+footer a:hover {
+    color: var(--rojo);
+}
+
+/* OCULTAR NUMEROS DE PAGINA */
+.numero-pagina {
+    display: none;
+}
+
+
+
+
+
+
+/* ===================================== */
+/* VOCES QUE RESISTEN (paginas 12 a 16) */
+/* ===================================== */
+
+:root {
+    --rojo: #ed1c24;
+    --negro: #111111;
+    --gris: #dedede;
+
+    /* Unidad de escala: 1u = 1px cuando la "pagina" mide 700px.
+       En pantallas mas angostas todo el diseno se reduce proporcionalmente. */
+    --u: min(1px, 0.1429vw);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+    color: var(--negro);
+    font-family: 'Baskervville', Georgia, serif;
+}
+
+/* ===================================== */
+/* MENU SUPERIOR (subtemas del capitulo) */
+/* ===================================== */
+
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+    padding: 22px 4%;
+    background: var(--negro);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.menu a {
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu a:hover {
+    color: var(--rojo);
+}
+
+/* ===================================== */
+/* ESTRUCTURA */
+/* ===================================== */
+
+main {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.pagina {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    scroll-margin-top: 85px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+/* TIPOGRAFIAS */
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    font-weight: 400;
+    line-height: 1.12;
+}
+
+p {
+    font-family: 'Baskervville', Georgia, serif;
+    line-height: 1.3;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+/* FOTOGRAFIAS: todas en blanco y negro */
+
+.pagina img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+
+/* ===================================== */
+/* PAGINA 12 - VOCES QUE RESISTEN */
+/* ===================================== */
+
+.apertura {
+    padding: calc(52 * var(--u)) 7.5% calc(40 * var(--u));
+}
+
+/* FOTO CENTRAL */
+
+.apertura-foto {
+    position: relative;
+    width: 71.8%;
+    margin: 0 auto calc(120 * var(--u));
+}
+
+.apertura-foto img {
+    aspect-ratio: 423 / 328;
+}
+
+/* CITA: la parte alta se mezcla con la foto, la caja sale por debajo */
+
+.apertura-cita {
+    position: absolute;
+    top: 100%;
+    left: 13.7%;
+    width: 69.7%;
+
+    padding: calc(10 * var(--u)) calc(55 * var(--u));
+    background: var(--rojo);
+
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: max(11px, calc(16 * var(--u)));
+    line-height: 1.38;
+    text-align: center;
+}
+
+.apertura-cita::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: calc(70 * var(--u));
+
+    background: var(--rojo);
+    mix-blend-mode: multiply;
+}
+
+/* TITULO */
+
+.apertura h1 {
+    font-size: max(28px, calc(54 * var(--u)));
+    line-height: 1.12;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0 0 calc(62 * var(--u));
+}
+
+/* INTRODUCCION */
+
+.apertura-texto p {
+    font-size: max(11px, calc(18.5 * var(--u)));
+    line-height: 1.25;
+    margin: 0;
+}
+
+
+/* ===================================== */
+/* PAGINA 13 - PROHIBICIONES */
+/* ===================================== */
+
+.prohibiciones {
+    padding: calc(43 * var(--u)) 7% calc(35 * var(--u));
+}
+
+/* CABECERA: titulo + foto pequena | foto grande */
+
+.prohibiciones-cabecera {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 30.7% 65.1%;
+    justify-content: space-between;
+
+    margin-bottom: calc(33 * var(--u));
+}
+
+/* BARRA ROJA (parte solida, a la izquierda de la foto grande) */
+
+.prohibiciones-cabecera::before {
+    content: "";
+    position: absolute;
+    top: calc(14 * var(--u));
+    left: 0;
+
+    width: 34.9%;
+    height: calc(56 * var(--u));
+
+    background: var(--rojo);
+    z-index: 1;
+}
+
+.prohibiciones-izquierda {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.prohibiciones-izquierda h2 {
+    font-size: max(17px, calc(38 * var(--u)));
+    line-height: 1.13;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: calc(26 * var(--u));
+}
+
+.prohibiciones-izquierda img {
+    aspect-ratio: 181 / 168;
+}
+
+.prohibiciones-derecha {
+    position: relative;
+    min-width: 0;
+}
+
+.prohibiciones-derecha img {
+    aspect-ratio: 388 / 362;
+}
+
+/* BARRA ROJA (parte que se mezcla sobre la foto grande) */
+
+.prohibiciones-rojo {
+    position: absolute;
+    top: calc(14 * var(--u));
+    left: 0;
+
+    width: 23.2%;
+    height: calc(56 * var(--u));
+
+    background: var(--rojo);
+    mix-blend-mode: multiply;
+    z-index: 2;
+}
+
+/* DOS COLUMNAS DE TEXTO */
+
+.prohibiciones-columnas {
+    display: grid;
+    grid-template-columns: 43.3% 45%;
+    column-gap: 10.7%;
+    align-items: start;
+}
+
+.prohibiciones-columnas p {
+    font-size: max(11px, calc(17 * var(--u)));
+    margin-bottom: calc(15 * var(--u));
+}
+
+.prohibiciones-columnas .columna-texto p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ===================================== */
+/* PAGINA 14 - INVISIBILIZACION */
+/* ===================================== */
+
+.invisibilizacion {
+    position: relative;
+    isolation: isolate;
+
+    display: grid;
+    grid-template-columns: 58% 42%;
+    align-items: start;
+
+    padding: 0 0 calc(29 * var(--u));
+}
+
+/* LINEA ROJA VERTICAL BAJO LA FOTO */
+
+.invisibilizacion::after {
+    content: "";
+    position: absolute;
+    left: calc(50 * var(--u));
+    top: calc(825 * var(--u));
+
+    width: calc(3 * var(--u));
+    height: calc(183 * var(--u));
+    background: var(--rojo);
+}
+
+/* FOTO GRANDE (pegada al borde izquierdo y superior) */
+
+.invis-foto {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.invis-foto img {
+    aspect-ratio: 402 / 825;
+}
+
+/* TITULO SOBRE RECUADRO BLANCO */
+
+.invis-titulo {
+    position: absolute;
+    z-index: 4;
+
+    top: calc(147 * var(--u));
+    left: 25.5%;
+    width: 42.7%;
+    height: calc(168 * var(--u));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+}
+
+.invis-titulo h2 {
+    font-size: max(17px, calc(35 * var(--u)));
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* TEXTO EN COLUMNA DERECHA */
+
+.invis-texto {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+
+    padding: calc(325 * var(--u)) calc(38 * var(--u)) 0 calc(36 * var(--u));
+}
+
+.invis-texto p {
+    font-size: max(11px, calc(18 * var(--u)));
+    line-height: 1.28;
+    margin-bottom: calc(20 * var(--u));
+}
+
+.invis-texto p:last-child {
+    margin-bottom: 0;
+}
+
+/* DATO DESTACADO: la parte alta se mezcla con la foto, la baja es solida */
+
+.invis-dato {
+    position: absolute;
+
+    top: calc(705 * var(--u));
+    left: 28.9%;
+    width: 28.9%;
+    min-height: calc(295 * var(--u));
+
+    padding: calc(53 * var(--u)) calc(9 * var(--u)) calc(20 * var(--u));
+    color: white;
+}
+
+.invis-dato::before,
+.invis-dato::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: var(--rojo);
+}
+
+.invis-dato::before {
+    top: 0;
+    height: calc(120 * var(--u));
+    mix-blend-mode: multiply;
+}
+
+.invis-dato::after {
+    top: calc(120 * var(--u));
+    bottom: 0;
+}
+
+.invis-dato > * {
+    position: relative;
+    z-index: 1;
+}
+
+.invis-dato strong {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: max(14px, calc(20 * var(--u)));
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: calc(6 * var(--u));
+}
+
+.invis-dato p {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: max(10.5px, calc(14.5 * var(--u)));
+    line-height: 1.3;
+    text-align: left;
+    margin-bottom: calc(24 * var(--u));
+}
+
+.invis-dato span {
+    font-family: 'Oswald', sans-serif;
+    font-size: max(10.5px, calc(14.5 * var(--u)));
+}
+
+
+/* ===================================== */
+/* PAGINA 15 - RESISTENCIA */
+/* ===================================== */
+
+.resistencia {
+    padding: calc(62 * var(--u)) 7.5% calc(8 * var(--u)) 7.9%;
+}
+
+.resistencia-superior {
+    display: grid;
+    grid-template-columns: 41.8% 53.4%;
+    justify-content: space-between;
+    align-items: start;
+}
+
+/* COLUMNA IZQUIERDA */
+
+.resistencia-izquierda {
+    padding-top: calc(8 * var(--u));
+}
+
+.resistencia-izquierda h2 {
+    font-size: max(18px, calc(36 * var(--u)));
+    line-height: 1.12;
+    text-align: center;
+    margin-bottom: calc(24 * var(--u));
+}
+
+.resistencia-izquierda p {
+    font-size: max(11px, calc(17.5 * var(--u)));
+    margin-bottom: calc(22 * var(--u));
+}
+
+/* COLUMNA DERECHA */
+
+.resistencia-derecha {
+    min-width: 0;
+}
+
+.resistencia-foto-superior img {
+    aspect-ratio: 313 / 251;
+}
+
+/* TEXTO SOBRE RECUADRO BLANCO (monta sobre la foto) */
+
+.resistencia-destacado {
+    position: relative;
+    z-index: 2;
+
+    width: 76%;
+    margin: calc(-73 * var(--u)) 0 0 15%;
+    padding: calc(12 * var(--u)) calc(22 * var(--u)) calc(14 * var(--u)) calc(20 * var(--u));
+
+    background: white;
+}
+
+.resistencia-destacado::before {
+    content: "";
+    position: absolute;
+    left: calc(-33 * var(--u));
+    top: calc(43 * var(--u));
+
+    width: calc(3 * var(--u));
+    height: calc(172 * var(--u));
+    background: var(--rojo);
+}
+
+.resistencia-destacado p {
+    font-size: max(11px, calc(17 * var(--u)));
+    line-height: 1.38;
+    margin: 0;
+}
+
+/* COMPOSICION INFERIOR: foto + cita roja */
+
+.resistencia-inferior {
+    position: relative;
+    margin-top: calc(50 * var(--u));
+}
+
+.resistencia-foto-inferior {
+    width: 57.7%;
+}
+
+.resistencia-foto-inferior img {
+    aspect-ratio: 338 / 273;
+}
+
+/* la franja izquierda de la cita se mezcla con la foto */
+
+.resistencia-cita {
+    position: absolute;
+    top: calc(-22 * var(--u));
+    left: 50.3%;
+    width: 45.7%;
+    height: calc(232 * var(--u));
+
+    padding: 0 calc(15 * var(--u)) 0 calc(48 * var(--u));
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+        to right,
+        transparent calc(43 * var(--u)),
+        var(--rojo) calc(43 * var(--u))
+    );
+
+    color: white;
+    text-align: left;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: max(11px, calc(16 * var(--u)));
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+.resistencia-cita::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: calc(43 * var(--u));
+
+    background: var(--rojo);
+    mix-blend-mode: multiply;
+}
+
+
+/* ===================================== */
+/* PAGINA 16 - REFLEXION FINAL */
+/* ===================================== */
+
+.cierre {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    aspect-ratio: 694 / 1040;
+    overflow: hidden;
+    scroll-margin-top: 85px;
+}
+
+/* Imagen de fondo (en blanco y negro como las demás) */
+.cierre::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-image: url("mujeresafganas17.png");
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+}
+
+/* Recuadro blanco con el texto encima de la foto */
+.cierre-contenido {
+    position: absolute;
+    z-index: 1;
+    top: 6.5%;
+    left: 18.8%;
+    width: 62.5%;
+
+    padding: calc(30 * var(--u)) calc(22 * var(--u)) calc(32 * var(--u));
+    background: white;
+}
+
+.cierre h2 {
+    font-size: max(17px, calc(39 * var(--u)));
+    line-height: 1.16;
+    margin-bottom: calc(32 * var(--u));
+}
+
+.cierre p {
+    font-size: max(11px, calc(17 * var(--u)));
+    line-height: 1.45;
+    text-align: left;
+    margin-bottom: calc(22 * var(--u));
+}
+
+.cierre p:last-child {
+    margin-bottom: 0;
+}
